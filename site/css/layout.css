@@ -1,3 +1,47 @@
-h1 {
-    
+.container {
+    margin: auto;
+    width: 1200px;
+    height: 800px;
+}
+
+.head {
+    background-color: rgb(125, 218, 255);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: solid black 2px;
+}
+
+.head > a {
+    grid-column: span 1;
+    display: grid;
+    justify-content: center;
+}
+
+.head > a:nth-of-type(1) {
+    grid-column: span 1;
+    display: grid;
+    justify-content: center;
+}
+
+.head > a:nth-of-type(2nd) {
+    grid-column: span 1;
+    display: grid;
+    justify-content: center;
+}
+
+.head > a{
+    text-decoration: none;
+    text-decoration-color: black;
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        width: auto;
+        height: auto;
+    }
 }
