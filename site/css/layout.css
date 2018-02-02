@@ -5,14 +5,15 @@
 }
 
 .head {
-    background-color: rgb(125, 218, 255);
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-bottom: solid black 2px;
+    grid-gap: 2px;
 }
 
 .head > a {
+    background-color: rgb(125, 218, 255);
     grid-column: span 1;
     display: grid;
     justify-content: center;
@@ -30,9 +31,50 @@
     justify-content: center;
 }
 
-.head > a{
+.head > a {
     text-decoration: none;
     text-decoration-color: black;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 20px);
+    grid-row-gap: span 1;
+    grid-row-gap: 10px;
+}
+
+main * {
+    grid-column: 2/8;
+    grid-row: span 1;
+}
+
+.advSearch {
+    background-color: rgb(137, 201, 209);
+}
+
+.searchDiv {
+    display: none;
+}
+
+.suggested {
+    height: 10vh;
+    display: none;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 20px);
+}
+
+.suggested * {
+    grid-column: 2/8;
+    grid-row: span 1;
+}
+
+.show {
+    display: block;
+}
+
+.showSuggested {
+    display: grid;
 }
 
 @media only screen and (max-width: 400px) {

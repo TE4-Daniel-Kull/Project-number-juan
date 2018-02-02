@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/layout.css">
+    <script src="js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,15 +23,25 @@
         <main>
             <!-- <input type="text">
             <button></button> -->
-            <select name="Destination" id="Destination" placeholder="Destination">
+            <div></div>
+            <select>
                 <option value="000">Destination</option>
                 <option value="0">Sverige</option>
                 <option value="1">KnoobLand</option>
                 <option value="2">HerpDerp</option>
             </select>
+            <button class="advSearch" onclick="ToggleSearch()">Advanced Search function</button>
+            <div class="searchDiv">
+                <select>
+                    <option value="000">Destination</option>
+                    <option value="0">Sverige</option>
+                    <option value="1">KnoobLand</option>
+                    <option value="2">HerpDerp</option>
+                </select>
+            </div>
         </main>
-        <footer class="suggested">
-    
+        <footer class="suggested showSuggested">
+            <h3>Suggested</h3>
         </footer>
     </div>
 </body>
