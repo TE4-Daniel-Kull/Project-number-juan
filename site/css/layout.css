@@ -1,3 +1,7 @@
+body {
+    height: 100vh;
+}
+
 .container {
     margin: auto;
     width: 1200px;
@@ -33,13 +37,13 @@
 
 .head > a {
     text-decoration: none;
-    text-decoration-color: black;
+    color: black;
 }
 
 main {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 20px);
+    grid-template-rows: repeat(9, 50px);
     grid-row-gap: span 1;
     grid-row-gap: 10px;
 }
@@ -58,15 +62,37 @@ main * {
 }
 
 .suggested {
-    height: 10vh;
+    border-top: solid lightblue 2px;
     display: none;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(5, 20px);
+    height: 0vh;
+    width: 100vw;
+    bottom: 0%;
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: 20px repeat(3, 50px);
+    grid-gap: 2px;
+    position: fixed;
 }
 
-.suggested * {
-    grid-column: 2/8;
+.suggestions {
+    background-color: pink;
+    grid-column: 2/6;
     grid-row: span 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+}
+
+.suggested h4 {
+    background-color: violet;
+}
+
+.suggestions h5 {
+    grid-column: span 3;
+    margin: 0;
+}
+
+.suggestions img {
+    grid-column: span 1;
 }
 
 .show {
@@ -75,6 +101,7 @@ main * {
 
 .showSuggested {
     display: grid;
+    height: 30vh;
 }
 
 @media only screen and (max-width: 400px) {
@@ -82,8 +109,17 @@ main * {
         margin: 0;
     }
 
+    main {
+        grid-template-rows: repeat(9, 20px);
+    }
+
     .container {
         width: auto;
         height: auto;
+    }
+
+    .showSuggested {
+        display: grid;
+        height: 40vh;
     }
 }
