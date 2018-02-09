@@ -1,16 +1,23 @@
 body {
     height: 100vh;
+    background-color: gray;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
 }
+
 
 .container {
     margin: auto;
     width: 1200px;
-    height: 800px;
+    height: 100vh;
+    background-color: white;
 }
 
 .head {
     margin: auto;
     display: grid;
+    height: 10vh;
     grid-template-columns: repeat(3, 1fr);
     border-bottom: solid black 2px;
     grid-gap: 2px;
@@ -41,15 +48,14 @@ body {
 }
 
 main {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 50px);
-    grid-row-gap: span 1;
     grid-row-gap: 10px;
 }
 
 main * {
-    grid-column: 2/8;
+    grid-column: 2/9;
     grid-row: span 1;
 }
 
@@ -57,17 +63,39 @@ main * {
     background-color: rgb(137, 201, 209);
 }
 
+.advSearchPressed {
+    transition: 0.3s;
+    background-color: gray;
+}
+
 .searchDiv {
     display: none;
+    grid-column: 2/9;
+    grid-row: span 1;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    
+    grid-gap: 15px;
+}
+
+.searchDiv * {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.searchDiv select {
+    height: 20px;
 }
 
 .suggested {
+    transition: 0.5s;
+    background-color: white;
     border-top: solid lightblue 2px;
-    display: none;
+    display: grid;
+    width: inherit;
     height: 0vh;
-    width: 100vw;
     bottom: 0%;
-    grid-template-columns: repeat(7, 50px);
+    grid-template-columns: 50px 50px repeat(3, 1fr) 50px;
     grid-template-rows: 20px repeat(3, 50px);
     grid-gap: 2px;
     position: fixed;
@@ -82,11 +110,12 @@ main * {
     margin: 0;
 }
 
-.suggested h4 {
+.suggested h3 {
+    text-indent: 5px;
     background-color: violet;
 }
 
-.suggestions h5 {
+.suggestions p {
     grid-column: span 3;
     margin: 0;
 }
@@ -95,31 +124,72 @@ main * {
     grid-column: span 1;
 }
 
+.homepage {
+    display: none;
+}
+
+.news {
+    display: none;
+}
+
 .show {
-    display: block;
+    display: grid;
 }
 
 .showSuggested {
+    transition: 0.5s;
     display: grid;
     height: 30vh;
 }
+
+
 
 @media only screen and (max-width: 400px) {
     body {
         margin: 0;
     }
-
+    
+    .head {
+        height: 15vh;
+    }
+    
     main {
-        grid-template-rows: repeat(9, 20px);
+        grid-template-rows: repeat(3, 20px) auto repeat(5, 20px);
     }
-
+    
     .container {
-        width: auto;
-        height: auto;
+        width: 100vw;
+        height: 100vh;
     }
-
+    
+    .suggested {
+        transition: 0.5s;
+    }
+    
     .showSuggested {
         display: grid;
         height: 40vh;
     }
+}
+
+.offers {
+    display: grid;
+    height: 89vh;
+}
+
+@media only screen and (max-width: 400px) {
+    .offers {
+        display: grid;
+        height: 85vh;
+    }
+}
+
+
+
+
+/* Font Styles n' Stuff */
+.title {
+    font-weight: 500;
+    font-size: 15px;
+
 }
