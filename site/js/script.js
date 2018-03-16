@@ -1,7 +1,7 @@
 var offers = false;
 var news = false;
 
-function ToggleSearch() {
+function toggleSearch() {
     var element = document.querySelector(".searchDiv");
     element.classList.toggle("show");
 
@@ -12,7 +12,7 @@ function ToggleSearch() {
     element.classList.toggle("advSearchPressed");
 }
 
-function ExpandOffers() {
+function expandOffers() {
     if(!offers) {
         offers = true;
         var element = document.querySelector(".suggested")
@@ -20,7 +20,7 @@ function ExpandOffers() {
     }
 }
 
-function MinimizeOffers() {
+function minimizeOffers() {
     if(offers) {
         offers = false;
         var element = document.querySelector(".suggested")
@@ -28,9 +28,9 @@ function MinimizeOffers() {
     }
 }
 
-function OpenNews() {
+function openNews() {
     if(!news) {
-        MinimizeOffers();
+        minimizeOffers();
         news = true;
         var element = document.querySelector(".homepage");
         element.classList.remove("show");
@@ -39,7 +39,7 @@ function OpenNews() {
     }
 }
 
-function CloseNews () {
+function closeNews () {
     if(news) {
         news = false;
         var element = document.querySelector(".homepage");
