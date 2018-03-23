@@ -1,0 +1,143 @@
+body {
+  height: 100vh;
+  background: linear-gradient(pink, purple);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px; }
+
+button {
+  background-color: #41cfff; }
+
+.container {
+  margin: auto;
+  width: 70vw;
+  height: 100vh;
+  background-color: white; }
+
+.head {
+  background-color: #009ecc;
+  display: grid;
+  height: 10vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  padding: 10px; }
+
+.head > div {
+  border-radius: 5%;
+  background-color: #41cfff;
+  grid-column: span 1;
+  display: grid;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  box-shadow: black; }
+
+main {
+  display: none;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 50px);
+  grid-row-gap: 10px; }
+
+main * {
+  grid-column: 2/9;
+  grid-row: span 1; }
+
+.advSearchPressed {
+  transition: 0.3s;
+  background-color: #83ffff; }
+
+.searchDiv {
+  display: none;
+  grid-column: 2/9;
+  grid-row: span 1;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 15px; }
+
+.searchDiv * {
+  grid-column: span 1;
+  grid-row: span 1; }
+
+.searchDiv select {
+  height: 20px; }
+
+.suggested {
+  transition: 0.5s;
+  background-color: white;
+  border-top: solid #41cfff 2px;
+  display: grid;
+  width: inherit;
+  height: 0vh;
+  bottom: 0%;
+  grid-template-columns: 50px 50px repeat(3, 1fr) 50px;
+  grid-template-rows: 20px repeat(3, 50px);
+  grid-gap: 2px;
+  position: fixed; }
+
+.suggestions {
+  background-color: #f490ff;
+  grid-column: 2/6;
+  grid-row: span 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0; }
+
+.suggested h3 {
+  text-indent: 5px;
+  background-color: #c747cb; }
+
+.suggestions p {
+  grid-column: span 3;
+  margin: 0; }
+
+.suggestions img {
+  grid-column: span 1; }
+
+.homepage {
+  display: none; }
+
+.news {
+  display: none; }
+
+.show {
+  display: grid; }
+
+.showSuggested {
+  transition: 0.5s;
+  display: grid;
+  height: 30vh; }
+
+@media only screen and (max-width: 400px) {
+  body {
+    margin: 0; }
+
+  .head {
+    height: 15vh; }
+
+  main {
+    grid-template-rows: repeat(3, 20px) auto repeat(5, 20px); }
+
+  .container {
+    width: 100vw;
+    height: 100vh; }
+
+  .suggested {
+    transition: 0.5s; }
+
+  .showSuggested {
+    display: grid;
+    height: 40vh; } }
+.offers {
+  display: grid;
+  height: 86vh; }
+
+@media only screen and (max-width: 400px) {
+  .offers {
+    display: grid;
+    height: 81vh; } }
+/* Font Styles n' Stuff */
+.title {
+  font-weight: 500;
+  font-size: 15px; }
+
+/* Are you proud of me david.... u did this */

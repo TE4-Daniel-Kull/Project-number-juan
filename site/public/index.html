@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="head title">
+            <div onclick="minimizeOffers(), openNews()"> <!--  Needs to be changed -->
+                <h2>News</h2>
+            </div>
+            <div onclick="expandOffers()"> <!--  Needs to be changed -->
+                <h2>Offers</h2>
+            </div>
+            <div onclick="minimizeOffers(), closeNews()"> <!--  Needs to be changed -->
+                <h2>Search</h2>
+            </div>
+        </header>
+        <main class="homepage show">
+            <div></div>
+            <select>
+                <option value="000">Destination</option>
+                <option value="0">Sverige</option>
+                <option value="1">KnoobLand</option>
+                <option value="2">HerpDerp</option>
+            </select>
+            <button class="advSearch" onclick="toggleSearch()">Advanced Search function</button>
+            <div class="searchDiv">
+                <select>
+                    <option value="000">Price (kr)</option>
+                    <option value="0">1 - 1000</option>
+                    <option value="1">1000 - 5000</option>
+                    <option value="2">5000 - 10000</option>
+                </select>
+                <select>
+                    <option value="000">Company</option>
+                    <option value="4">Candy n' Co</option>
+                    <option value="5">Sweets n' treats</option>
+                    <option value="6">Candycane Hotels</option>
+                </select>
+            </div>
+            <button>Search!</button>
+            <!-- Är du nöjd nu david..... :...D -->
+        </main>
+        <main class="news">
+            <img src="img/Poof.png" alt="Pretend this is a news page. plz...">
+        </main>
+        <footer class="suggested showSuggested">
+            <h3 class="suggestions title">Suggested</h3>
+            <div class="suggestions">
+                <img src="img/cat1.png" alt="Company Image">    
+                <p>Travel to Candyland, Today! Only 3.99</p>
+            </div>
+            <div class="suggestions">
+                    <img src="img/cat2.png" alt="Company Image">    
+                    <p>Dreamland is waiting for you, buy a ticket now! Only 3.99</p>
+                </div>
+            <div class="suggestions">
+                <img src="img/cat3.png" alt="Company Image">    
+                <p>David... Du gjorde detta, det är ditt fel....., only 3.99</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
